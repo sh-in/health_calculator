@@ -14,7 +14,7 @@ header {
 header h1 {
   margin: 0;
   font-size: 24px;
-  line-height: 64px;
+  line-height: 40px;
 }
 
 .sp-menu {
@@ -22,8 +22,9 @@ header h1 {
 }
 
 .sp-menu #open {
+  vertical-align: middle;
   font-size: 32px;
-  line-height: 64px;
+  line-height: 40px;
   cursor: pointer;
 }
 
@@ -73,7 +74,7 @@ header h1 {
 
 .overlay.show li {
   opacity: 1;
-  transform: none;
+  transform: translateY(16px);
 }
 
 .overlay a {
@@ -88,6 +89,14 @@ header h1 {
 .input-container {
   width: 80%;
   margin: 0 auto;
+  text-align: center;
+}
+
+.input-container > h2 {
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.2em;
 }
 
 .input-container ul {
@@ -98,9 +107,66 @@ header h1 {
 
 .input-container li {
   text-align: center;
+  padding-bottom: 8px;
+}
+
+.input-container li:first-child {
+  padding: 8px 0;
+}
+
+.output-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.output-container > h2 {
+  margin: 0;
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+.output-container ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.output-container li{
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.output-container li:first-child {
+  padding: 8px 0;
+}
+
+.output-container #btn {
+  display: block;
+  margin: 0 auto;
+}
+
+.output-container dl {
+  margin: auto;
+}
+
+.output-container dl dt {
+  float: left;
+  clear: both;
 }
 
 /* medium screen */
 @media (min-width: 600px) {
+  header h1 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 64px;
+  }
 
+  .sp-menu #open {
+    vertical-align: middle;
+    font-size: 32px;
+    line-height: 64px;
+    cursor: pointer;
+  }
 }

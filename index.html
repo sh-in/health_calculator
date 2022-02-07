@@ -35,13 +35,138 @@
 
   <main>
     <div class="input-container">
+      <h2>入力欄</h2>
       <ul>
-        <li>性別</li>
-        <li>年齢</li>
-        <li>身長</li>
-        <li>体重</li>
-        <li>活動レベル</li>
-        <li>食事スタイル</li>
+        <li>
+          <label>
+            男性
+            <input type="radio" name="gender" value="male" checked>
+          </label>
+  
+          <label>
+            女性
+            <input type="radio" name="gender" value="female">
+          </label>
+        </li>
+
+        <li>
+          <label>
+            年齢
+            <input type="number" id="age" min="0" max="130">
+          </label>
+        </li>
+
+        <li>
+          <label>
+            身長
+            <input type="number" id="heights" min="100.0" max="200.0" step="0.1">
+            cm
+          </label>
+        </li>
+
+        <li>
+          <label>
+            体重
+            <input type="number" id="weights" min="10.0" max="200.0" step="0.1">
+            kg
+          </label>
+        </li>
+
+        <li>
+          <label>
+            活動レベル
+            <select id="activity_level">
+              <option value="">-</option>
+              <option value="1.9">とても高い</option>
+              <option value="1.725">高い</option>
+              <option value="1.55">普通</option>
+              <option value="1.375">低い</option>
+              <option value="1.2">とても低い</option>
+            </select>
+          </label>
+        </li>
+
+        <li>
+          <label>
+            目的
+            <select id="purpose">
+              <option value="">-</option>
+              <option value="200">増量</option>
+              <option value="0">維持</option>
+              <option value="-500">減量</option>
+            </select>
+          </label>
+        </li>
+
+        <li>
+          <label>
+            食事スタイル
+            <select id="diet_style">
+              <option value="">-</option>
+              <option value="balance">バランス</option>
+              <option value="high_protein">高タンパク</option>
+              <option value="ketone">ケトジェニック</option>
+            </select>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="output-container">
+      <h2>計算結果</h2>
+      <ul>
+        <li>
+          <label>
+            １日の摂取カロリー:
+            <input type="text" id="calory" readonly="">
+          </label>
+        </li>
+
+        <li>
+          <label>
+            炭水化物(g):
+            <input type="text" id="carbo" readonly="">
+          </label>
+        </li>
+        
+        <li>
+          タンパク質:
+          <input type="text" id="protein" readonly="">
+        </li>
+        
+        <li>
+          脂質(g):
+          <input type="text" id="fat" readonly="">
+        </li>
+        <button id="btn">計算</button>
+
+        <dl>
+          <dt>１日の摂取カロリー:</dt>
+          <dd>
+            <input type="text" id="calory" readonly="">
+          </dd>
+        </dl>
+
+        <dl>
+          <dt>炭水化物(g):</dt>
+          <dd>
+            <input type="text" id="carbo" readonly="">
+          </dd>
+        </dl>
+        
+        <dl>
+          <dt>タンパク質:</dt>
+          <dd>
+            <input type="text" id="protein" readonly="">
+          </dd>
+        </dl>
+
+        <dl>
+          <dt>脂質(g):</dt>
+          <dd>
+            <input type="text" id="fat" readonly="">
+          </dd>
+        </dl>
       </ul>
     </div>
   </main>
