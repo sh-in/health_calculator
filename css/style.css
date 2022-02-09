@@ -93,6 +93,7 @@ header h1 {
   text-align: center;
   padding: 0.5em 1em;
   border-top: solid 5px #5d627b;
+  border-radius: 3px;
   background: whitesmoke;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
@@ -124,12 +125,44 @@ header h1 {
   margin: 0 auto;
 }
 
+/* カーソルを重ねる要素 */
+.tooltip {
+  position: relative; /* ツールチップの位置の基準に */
+  cursor: pointer; /* カーソルを当てたときにポインターに */
+}
+
+/* ツールチップのテキスト */
+.tooltip-text {
+  opacity: 0; /* はじめは隠しておく */
+  visibility: hidden; /* はじめは隠しておく */
+  position: absolute; /* 絶対配置 */
+  left: 50%; /* 親に対して中央配置 */
+  transform: translateX(-50%); /* 親に対して中央配置 */
+  bottom: -5px; /* 親要素下からの位置 */
+  display: inline-block;
+  padding: 5px; /* 余白 */
+  white-space: nowrap; /* テキストを折り返さない */
+  font-size: 0.8rem; /* フォントサイズ */
+  line-height: 1.3; /* 行間 */
+  background: #333; /* 背景色 */
+  color: #fff; /* 文字色 */
+  border-radius: 3px; /* 角丸 */
+  transition: 0.3s ease-in; /* アニメーション */
+}
+
+/* ホバー時にツールチップの非表示を解除 */
+.tooltip:hover .tooltip-text {
+  opacity: 1;
+  visibility: visible;
+}
+
 .output-container {
   width: 60%;
   margin: 2em auto;
   text-align: center;
   padding: 0.5em 1em;
   border-top: solid 5px #5d627b;
+  border-radius: 3px;
   background: whitesmoke;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
