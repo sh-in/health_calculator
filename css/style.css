@@ -2,6 +2,7 @@
 body {
   margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background: #f2f2f2;
 }
 
 /* small screen */
@@ -87,16 +88,20 @@ header h1 {
 
 /* main */
 .input-container {
-  width: 80%;
-  margin: 0 auto;
+  width: 60%;
+  margin: 2em auto;
   text-align: center;
+  padding: 0.5em 1em;
+  border-top: solid 5px #5d627b;
+  background: whitesmoke;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
 
 .input-container > h2 {
   margin: 0;
   text-align: center;
   font-weight: normal;
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 .input-container ul {
@@ -114,22 +119,29 @@ header h1 {
   padding: 8px 0;
 }
 
-.output-container {
-  width: 80%;
+.input-container #btn {
+  display: block;
   margin: 0 auto;
+}
+
+.output-container {
+  width: 60%;
+  margin: 2em auto;
+  text-align: center;
+  padding: 0.5em 1em;
+  border-top: solid 5px #5d627b;
+  background: whitesmoke;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
 }
 
 .output-container > h2 {
   margin: 0;
   text-align: center;
   font-weight: normal;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  padding-top: 16px;
 }
 
-.output-container #btn {
-  display: block;
-  margin: 0 auto;
-}
 
 .output-container dl {
   margin: auto;
@@ -140,12 +152,14 @@ header h1 {
 .output-container dt {
   text-align: center;
   width: 100%;
+  padding-bottom: 4px;
 }
 
 .output-container dd {
   text-align: center;
   margin: 0;
   width: 100%;
+  padding-bottom: 4px;
 }
 
 /* medium screen */
@@ -167,24 +181,20 @@ header h1 {
   /* main */
   .output-container dl {
     margin: auto;
-    padding-bottom: 8px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* justify-content: center; */
     justify-content: space-between;
     width: 100%;
   }
   
   .output-container dt {
-    /* width: 155px; */
     width: 48%;
     text-align: end;
   }
   
   .output-container dd {
     margin: 0;
-    /* width: calc(100% - 155px); */
     width: 48%;
     text-align: start;
   }

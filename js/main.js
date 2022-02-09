@@ -67,11 +67,12 @@
           protein=weight*2;
           fat=calory*0.25/9;
           carb=(calory-protein*4-fat*9)/4;
-      }else if(diet=="ketone"){
-          protein=calory*0.2/4;
-          fat=calory*0.75/9;
-          carb=calory*0.05/4;
       }
+      // }else if(diet=="ketone"){
+      //     protein=calory*0.2/4;
+      //     fat=calory*0.75/9;
+      //     carb=calory*0.05/4;
+      // }
 
       //計算結果を表示する。
       document.getElementById("calory").value=calory.toFixed(2);
