@@ -153,7 +153,7 @@ header h1 {
 }
 
 /* ホバー時にツールチップの非表示を解除 */
-.tooltip: .tooltip-text {
+.tooltip:hover .tooltip-text {
   opacity: 1;
   visibility: visible;
 }
