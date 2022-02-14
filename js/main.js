@@ -25,6 +25,23 @@
   });
 }
 
+// accordion for help
+{
+  const dts = document.querySelectorAll("dt");
+
+  dts.forEach(dt => {
+    dt.addEventListener("click", () => {
+      dt.parentNode.classList.toggle("appear");
+
+      dts.forEach(el => {
+        if(el!==dt){
+          el.parentNode.classList.remove("appear");
+        }
+      })
+    })
+  })
+}
+
 // calculate
 {
   let btn = document.getElementById("btn");

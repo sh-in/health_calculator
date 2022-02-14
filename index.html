@@ -73,45 +73,7 @@
             kg
           </label>
         </li>
-
-        <li>
-          <label>
-            活動レベル
-            <select id="activity_level">
-              <option value="">-</option>
-              <option value="1.9">とても高い</option>
-              <option value="1.725">高い</option>
-              <option value="1.55">普通</option>
-              <option value="1.375">低い</option>
-              <option value="1.2">とても低い</option>
-            </select>
-            <button class="tooltip">
-              <span class="tooltip-text">
-                  <ul>
-                      <li>とても低い:めったに運動を行わない場合</li>
-                      <li>低い:週に1～3日間運動をする場合</li>
-                      <li>普通:週に3～5日間運動をする場合</li>
-                      <li>高い:週に6～7日間運動をする場合</li>
-                      <li>とても高い:毎日運動し、肉体労働を行っている場合。あるいは1日2回運動をする場合</li>
-                  </ul>
-              </span>
-              ?
-            </button>
-          </label>
-        </li>
-
-        <li>
-          <label>
-            目的
-            <select id="purpose">
-              <option value="">-</option>
-              <option value="200">増量</option>
-              <option value="0">維持</option>
-              <option value="-500">減量</option>
-            </select>
-          </label>
-        </li>
-
+        
         <li>
           <label>
             食事スタイル
@@ -121,18 +83,57 @@
               <option value="high_protein">高タンパク</option>
               <!-- <option value="ketone">ケトジェニック</option> -->
             </select>
-            <button class="tooltip">
-              <span class="tooltip-text">
-                  <ul>
-                      <li>バランス:たんぱく質、脂質、炭水化物をバランスよく。</li>
-                      <li>高たんぱく:たんぱく質を多め。</li>
-                      <!-- <li>ケトジェニック:炭水化物はほとんどなしで、脂質をかわりにとる。</li> -->
-                  </ul>
-              </span>
-              ?
-            </button>
+            <!-- <ul class="help_info">
+              <li>バランス:たんぱく質、脂質、炭水化物をバランスよく。</li>
+              <li>高たんぱく:たんぱく質を多め。</li>
+              <li>ケトジェニック:炭水化物はほとんどなしで、脂質をかわりにとる。</li>
+            </ul> -->
           </label>
         </li>
+        
+        <dl>
+          <div>
+            <dt>活動レベル</dt>
+            <dd>
+              <select id="activity_level">
+                <option value="">-</option>
+                <option value="1.9">とても高い</option>
+                <option value="1.725">高い</option>
+                <option value="1.55">普通</option>
+                <option value="1.375">低い</option>
+                <option value="1.2">とても低い</option>
+              </select>
+            </dd>
+            <dd>
+              <ul class="help_info">
+                  <li>とても低い:めったに運動を行わない場合</li>
+                  <li>低い:週に1～3日間運動をする場合</li>
+                  <li>普通:週に3～5日間運動をする場合</li>
+                  <li>高い:週に6～7日間運動をする場合</li>
+                  <li>とても高い:毎日運動し、肉体労働を行っている場合。あるいは1日2回運動をする場合</li>
+              </ul>
+            </dd>
+          </div>
+          
+          <div>
+            <dt>目的</dt>
+            <dd>
+              <select id="purpose">
+                <option value="">-</option>
+                <option value="200">増量</option>
+                <option value="0">維持</option>
+                <option value="-500">減量</option>
+              </select>
+            </dd>
+            <dd>
+              <ul class="help_info">
+                <li>増量: 1ヶ月で1キロ</li>
+                <li>維持: 現在の体重を維持</li>
+                <li>減量: 1ヶ月で2キロ</li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
       </ul>
       <button id="btn">計算</button>
     </div>
@@ -140,7 +141,7 @@
     <div class="output-container">
       <h2>計算結果</h2>
       <dl>
-        <dt>１日の摂取カロリー</dt>
+        <dt>1日の摂取カロリー</dt>
         <dd>
           <input type="text" id="calory" readonly="">
           kcal
